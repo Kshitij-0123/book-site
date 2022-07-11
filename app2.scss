@@ -1,0 +1,437 @@
+@import url('https://fonts.googleapis.com/css2?family=Edu+QLD+Beginner&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Caveat&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Caveat&family=Finlandica&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+SC:wght@500&family=Roboto+Slab&display=swap');
+
+$winter-grad: linear-gradient(to top, #f46b45, #eea849);
+$purple-grad: linear-gradient(to top, #4568dc, #b06ab3);
+$purple-grad-r: linear-gradient(to right, #b06ab3, #4568dc);
+$green-grad: linear-gradient(to top, #52c234, #061700);
+$orange-grad: linear-gradient(to top, #f46b45, #eea849);
+$carbon-grad: linear-gradient(to top, #1a2980, #26d0ce);
+$viscious-grad: linear-gradient(to top, #cc2b5e, #753a88);
+
+
+$blue-gradient: linear-gradient(-225deg, #7de2fc 0%, #b9b6e5 100%);
+$purple-gradient: linear-gradient(-225deg, #5271c4 0%, #b19fff 48%, #eca1fe 100%);
+$pink-gradient: linear-gradient(-225deg, #ffe29f 0%, #ffa99f 48%, #ff719a 100%);
+$green-gradient: linear-gradient(-60deg, #16a085 0%, #f4d03f 100%);
+$orange-gradient: linear-gradient(-60deg, #ff5858 0%, #f09819 100%);
+$strong-bliss: linear-gradient(to right, #f78ca0 0%, #f9748f 19%, #fd868c 60%, #fe9a8b 100%);
+$viscious-stance: linear-gradient(60deg, #29323c 0%, #485563 100%);
+$slick-carbon: linear-gradient(to bottom, #323232 0%, #3F3F3F 40%, #1C1C1C 150%), linear-gradient(to top, rgba(255, 255, 255, 0.40) 0%, rgba(0, 0, 0, 0.25) 200%);
+$scroll-gradient: linear-gradient(to right, #bdc3c7 0%, #2c3e50 99%);
+$dark-scroll-gradient: linear-gradient(to right, #ffecd2 0%, #fcb69f 100%);
+
+*::-webkit-scrollbar {
+    width: 6px;
+  }
+
+  *::-webkit-scrollbar-track {
+    background: #ffffff;
+  }
+
+  *::-webkit-scrollbar-thumb {
+    background-color: #d6d6d6;
+    border-radius: 2px;
+    border: 1px groove #ffffff00;
+  }
+button {
+    all: unset;
+    cursor: pointer;
+}
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+
+body{
+    background-color: #F0F0F0;
+}
+
+
+nav{
+    display: flex;
+    align-items: center;
+    align-self: flex-end;
+    flex-direction: row;
+    background-color: #C7DFFF;
+    height: 50px;
+    justify-content: space-between;
+}
+#svg{
+    height: auto;
+    margin: 0 0 0 1%;
+    width: 30px;
+    margin:0 1.5%;
+}
+#dp{
+    background-color: #a5b8d0;
+    margin:10px 0 0 0;
+    padding:0.5px;
+    border:1px rgb(216, 255, 255) solid;
+    width: 35px;
+    height: 35px;
+    border-radius: 100%;
+    z-index: 999;
+}
+.ex{
+    display: flex;
+    align-items: center;
+}
+.search{    
+    width: 0;
+    height: 0;
+    border: 0;
+    border-bottom: 1px solid rgb(171, 198, 255);
+    border-top: 1px solid rgb(171, 198, 255);
+    padding:7px 0px 5px 0px;
+    position: absolute;
+    background-color: rgb(232, 239, 254);
+    right: 70px;
+    top: 8px;
+    border-radius: 5px;
+    height: 20px;
+    transition: width 0.4s cubic-bezier(0.57, -0.29, 0.14, 1.24);
+}
+.search_active{
+    height: 20px;
+    width: 160px;
+    border-radius: 5px;
+    border: 1px solid rgb(171, 198, 255);
+    padding:7px 5px 5px 12px;
+    box-shadow: 0px 0px 20px rgb(172, 182, 210);
+}
+.site_icon{
+    height: 68px;
+    width: 68px;
+}
+nav button{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+
+
+.profile_card{
+    display: flex;
+    justify-content: center;
+}
+.user_profile{
+    // font-family: 'Cormorant SC', serif;
+    font-family: 'Roboto Slab', serif;
+    font-weight: 100;
+
+    border-radius: 6px;
+    padding: 0px;
+    margin: 3px 0 0 5px;
+    position: absolute;
+    z-index: 1000;
+    height:0px;
+    box-shadow: 0px 0px 10px rgb(223, 223, 223);
+    width: 200px;
+    overflow: hidden;
+    background: #f2f2f2;
+    transition: height 0.5s cubic-bezier(0.57, -0.29, 0.14, 1.24), box-shadow 0.5s, margin 0.5s, padding 0.6s;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+.user_profile_active{
+    margin: 8px 0 0 5px;
+    padding: 30px 20px;
+    height:280px;
+    width: 200px;
+    background: #f2f2f2;
+    box-shadow: 0px 0px 5px rgb(194, 194, 194);
+    border-radius: 6px;
+}
+.name_level{
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.name_level button{
+    font-family: 'Oswald', sans-serif;
+    font-weight: 900;
+    border-radius: 50%;
+    padding: 0.4rem 0.4rem 0.4rem 0.4rem;
+    border: 1px solid black;
+}
+.status{
+    display:flex;
+    flex-direction: row;
+    justify-content:space-evenly;
+}
+.statusnum{
+    border-radius: 50%;
+    width:10px;
+    height:10px;
+}
+.ta{
+    margin:0 22.5px;
+    box-shadow: -2px -2px 10px rgb(0, 213, 0);
+    border: 0.5px solid rgb(0, 220, 84);
+    padding: 0.5px;
+    background: rgb(0, 209, 0) content-box;
+}
+.tb{
+    margin:0 22.5px;
+    box-shadow: -2px -2px 10px rgb(255, 200, 0);
+    border: 0.5px solid rgb(255, 200, 0);
+    padding: 0.5px;
+    background: rgb(255, 183, 0) content-box;
+}
+.tc{
+    margin:0 22.5px;
+    background: rgb(227, 0, 0) content-box;
+    border: 0.5px solid rgb(173, 0, 0);
+    padding: 0.5px;
+    box-shadow: -2px -2px 10px rgb(255, 29, 29);
+}
+.td{
+    margin:0 22.5px;
+    background: rgb(60, 60, 60) content-box;
+    border: 0.5px solid rgb(54, 54, 54);
+    padding: 0.5px;
+    box-shadow: -2px -2px 10px rgb(71, 71, 71);
+}
+.act{
+    margin: 0;
+    position: relative;
+    top: -12px;
+    right: -27px;
+    z-index: 1000;
+}
+.stat{
+    position: absolute;
+    margin-top: 35px;
+    overflow: hidden;
+    height:0px;
+    font-size: 12px;
+    font-weight: 600;
+    transition: height 0.5s cubic-bezier(0.59,-0.07, 0.09, 0.94);
+}
+.stat_active{
+    height: 15px;
+    text-align: center;
+}
+
+.status_stat{
+    // height:10px;
+    // width:61.45px;
+    font-family: 'Oswald', sans-serif;
+    padding:15px 0 20px;
+    border-left: 2px solid rgba(230, 230, 230);
+    border-bottom:1px solid rgb(235, 235, 235) ;
+    border-top: 1px solid rgb(235, 235, 235);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.status_stat:first-of-type{
+    border-top-left-radius: 6px;
+    border-bottom-left-radius: 6px;
+}
+.status_stat:last-of-type{
+    border-right: 1px solid rgba(230, 230, 230);
+    border-top-right-radius: 6px;
+    border-bottom-right-radius: 6px;
+}
+
+
+.carousel{
+    display: inline-block;
+    justify-content: center;
+    margin-top: 30vh;
+}
+.carousel_elements{
+    padding: 10px;
+    padding-right: 0;
+    background-color: white;
+    width:370px;
+    display: flex;
+    height:217px;
+    border:1px solid black;
+    margin:0 50px;
+    border-radius: 6px;
+}
+
+
+.book_cover{
+    height: 233px;
+    width: 147px;
+    transform: scale(00.9);
+    margin-left: -3px;
+    top:-0.5rem;
+    box-shadow: 2px 1px 4px rgba(0,0,0,0.5);
+    border-radius: 6px;
+    position: relative;
+    transition:all 0.5s, margin-left 0.5s;
+}
+.carousel_elements:hover .book_cover{
+    height: 233px;
+    width: 147px;
+    transform: scale(00.9);
+    margin-left: 10px;
+    transform: translateY(-1.7rem);
+    box-shadow: 8px 7px 15px rgba(0,0,0,0.5);
+    border-radius: 6px;
+}
+
+div .card{
+    margin: 5% 0 0 5px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    height: fit-content;
+    width: 217px;
+    transition: transform 0.5s ease-out;
+}
+.carousel_elements:hover .card{
+    transform:translateX(5px)
+}
+.card h1{
+    font-size: large;
+    letter-spacing: 1px;
+    font-family: 'Roboto Slab', serif;
+    font-weight: 700;
+}
+.card .author{
+    margin-top: 10px;
+    font-family: 'Bona Nova', serif;
+}
+.card .rating{
+    margin-top: 5%;
+    margin-left: 5px;
+    font-size: x-large;
+    letter-spacing: 0.4em;
+    font-family: 'Josefin Sans', sans-serif;
+}
+.card .synopsis{
+    font-size: 1em;
+    margin-top: 5%;
+    text-align: start;
+    width: 200px;
+    align-self: center;
+    overflow-y: scroll;
+    height: 106px;
+    font-family: 'Oswald', sans-serif;
+    line-height: 22px;
+    transition:height 0.3s 0.05s,width 0.3s 0.05s;
+}
+.carousel_elements:hover .synopsis{
+    width: 190px;
+    height:110px;
+}
+
+
+.quote_body{
+
+    position: relative;
+    background-image: $purple-grad;
+    z-index: 1;
+
+    color:white;
+    background-image: $purple-grad;
+    border:0px black solid;
+    height:148px;
+    width:242px;
+    margin-left: 600px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-radius: 10px;
+    transition: background-image 0.5s linear;
+    box-shadow: 1px 0px 5px rgba(0,0,0,0.5);
+}
+.quote_body::before {
+    position: absolute;
+    content: "";
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-image: $purple-grad-r;
+    z-index: -1;
+    transition: opacity 0.5s linear;
+    opacity: 0;
+    border-radius: 8px;
+}
+.quote_body:hover::before {
+    opacity: 1;
+}
+.quote{
+    font-family: 'Josefin Sans', sans-serif;
+    font-size:medium;
+    transition: font-size 0.20s;
+    flex-wrap: wrap;
+}
+.quote::first-letter{
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: aliceblue;
+}
+
+.quote_ref{
+    color:#f5f5f5;
+    text-align: right;
+    font-family: 'Roboto Slab', serif;
+    font-weight:500;
+    font-size: 0.7em;
+    text-transform: uppercase;
+    padding: 4px 4px 0 0;
+    transition: font-size 0.25s,padding 0.25s;
+}
+.quote_ref::first-letter{
+        font-family: 'Roboto Slab', serif;
+        font-size: 1.2rem;
+        color:#f5f5f4;
+}
