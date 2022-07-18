@@ -88,3 +88,18 @@ t4.addEventListener("click",()=>{
     else{return 0;}
     s4.classList.toggle("stat_active"); 
 });
+
+// const skillName = document.querySelectorAll(".skillName");
+const skillRatingsf = document.querySelectorAll(".f");
+const skillRatingsnf = document.querySelectorAll(".nf");
+skillRatingsColor = {
+    n:["#fa960a","#05c5fa","#ffb803","#1e6ffa","#a5cf36","rgba(24, 24, 29, 0.811)","#e05509","#f74848"],
+    f:["#ffae3d","#2dcefa","#fac02d","#0850cc","#b1f005","rgba(24, 24, 29, 0.811)","#fc6c1e","#e83c3c"],
+    nf:["#ffc370","#70dbff","#fae22d","#5c85cc","#d0ff4f","rgba(35, 35, 44, 0.811)","#f09767","#b35656"]
+}
+for (let i = 0; i < skillRatingsf.length; i++) {
+    // skillName[i].style.color = skillRatingsColor["n"][i];
+    // skillName[i].style.textShadow = `0 0 1px ${skillRatingsColor["n"][i]}`;
+    skillRatingsf[i].style.color = skillRatingsColor["f"][i+1];
+    skillRatingsnf[i].style.color = skillRatingsColor["nf"][i+1];
+}

@@ -285,12 +285,25 @@ nav button{
 }
 
 
-.carousel{
-    display: inline-block;
-    justify-content: center;
-    margin-top: 30vh;
+// .carousel{
+//     display: inline-block;
+//     justify-content: center;
+//     margin-top: 30vh;
+// }
+.book_shelf{
+    display: flex;
+    flex-direction: column;
+    margin: 50px 0 50px 0;
+    // justify-content: center;
 }
-.carousel_elements{
+.row1,.row2{
+    display: flex;
+    // flex-direction: column;
+    margin: 5px 0 5px 0;
+    justify-content: center;
+}
+.book_card{
+    transform: scale(0.95);
     padding: 10px;
     padding-right: 0;
     background-color: white;
@@ -298,7 +311,7 @@ nav button{
     display: flex;
     height:217px;
     border:1px solid black;
-    margin:0 50px;
+    // margin:0 50px;
     border-radius: 6px;
 }
 
@@ -314,7 +327,7 @@ nav button{
     position: relative;
     transition:all 0.5s, margin-left 0.5s;
 }
-.carousel_elements:hover .book_cover{
+.book_card:hover .book_cover{
     height: 233px;
     width: 147px;
     transform: scale(00.9);
@@ -323,7 +336,6 @@ nav button{
     box-shadow: 8px 7px 15px rgba(0,0,0,0.5);
     border-radius: 6px;
 }
-
 div .card{
     margin: 5% 0 0 5px;
     display: flex;
@@ -333,7 +345,7 @@ div .card{
     width: 217px;
     transition: transform 0.5s ease-out;
 }
-.carousel_elements:hover .card{
+.book_card:hover .card{
     transform:translateX(5px)
 }
 .card h1{
@@ -347,11 +359,25 @@ div .card{
     font-family: 'Bona Nova', serif;
 }
 .card .rating{
-    margin-top: 5%;
-    margin-left: 5px;
     font-size: x-large;
-    letter-spacing: 0.4em;
-    font-family: 'Josefin Sans', sans-serif;
+    letter-spacing: 0.2em;
+}
+.rating{
+    margin-top: 5px;
+    font-size: 30px;
+}
+.star{
+    text-shadow: 0 0 2px rgb(153, 153, 153);
+    display: inline-block;
+    transform: rotate(70deg) scale(1);
+    transition: all 0.4s;
+}
+.star:nth-of-type(2n-1){
+    transform: rotate(-70deg) scale(1);
+}
+.card:hover .star{
+    transform: rotate(0deg) scale(1.2);
+    letter-spacing: 0;
 }
 .card .synopsis{
     font-size: 1em;
@@ -365,12 +391,15 @@ div .card{
     line-height: 22px;
     transition:height 0.3s 0.05s,width 0.3s 0.05s;
 }
-.carousel_elements:hover .synopsis{
+.book_card:hover .synopsis{
     width: 190px;
     height:110px;
 }
 
-
+.quote_list{
+    display:flex;
+    justify-content: space-evenly;
+}
 .quote_body{
 
     position: relative;
@@ -382,7 +411,7 @@ div .card{
     border:0px black solid;
     height:148px;
     width:242px;
-    margin-left: 600px;
+    margin: 0 0px 20px 0;
     padding: 20px;
     display: flex;
     flex-direction: column;
