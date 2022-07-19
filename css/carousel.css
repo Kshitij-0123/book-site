@@ -62,11 +62,17 @@ body {
 .carousel {
   border-radius: 10px;
   color: aliceblue;
+  position: relative;
+  display: flex;
   height: 350px;
   align-items: center;
+  justify-content: space-between;
+  width: 100vw;
 }
 
 .btn {
+  display: flex;
+  align-items: center;
   z-index: 500;
   position: absolute;
   top: 50%;
@@ -94,34 +100,49 @@ body {
   border-bottom-left-radius: 5px;
 }
 
+.btnimg {
+  height: 20px;
+}
+
 .track_container {
-  position: relative;
-  background-color: black;
   height: 100%;
+  width: 100%;
+  margin: 2.5vw;
+  overflow: hidden;
 }
 
-.carousel-track {
-  margin: 0;
-  padding: 0;
-  background-color: black;
+.carousel_track {
+  height: 100%;
+  width: 100%;
+  transform: translateX(0);
+  transition: transform 1s ease 0s;
 }
 
 .slide {
-  transition: opacity 0.5s;
-}
-
-.slide {
-  position: absolute;
+  height: 350px;
   width: 95vw;
   border-radius: 10px;
-  background: linear-gradient(to right, rgba(4, 4, 4, 0.7), rgba(36, 36, 36, 0.7)), url("./resources/86-eighty-six-wallpaper-8.jpg");
+  display: flex;
+  align-items: center;
+  position: absolute;
+}
+
+.a {
   background-repeat: no-repeat;
   background-position: 10% 5%;
-  transform: translateX(2.5vw);
-  display: flex;
-  /* margin:20px; */
-  height: 350px;
-  align-items: center;
+  background-image: linear-gradient(to right, rgba(4, 4, 4, 0.7), rgba(36, 36, 36, 0.7)), url("./resources/wp9110849-86-eighty-six-wallpapers.jpg");
+}
+
+.b {
+  background-repeat: no-repeat;
+  background-position: 10% 5%;
+  background-image: linear-gradient(to right, rgba(4, 4, 4, 0.7), rgba(36, 36, 36, 0.7)), url("./resources/86-eighty-six-wallpaper-8.jpg");
+}
+
+.c {
+  background-repeat: no-repeat;
+  background-position: 10% 5%;
+  background-image: linear-gradient(to right, rgba(4, 4, 4, 0.7), rgba(36, 36, 36, 0.7)), url("./resources/wp9110891-86-eighty-six-wallpapers.jpg");
 }
 
 .carousel_book_cover {
@@ -139,7 +160,6 @@ body {
 
 .carousel_card {
   color: rgb(218, 218, 218);
-  display: flex;
   flex-direction: column;
 }
 
@@ -161,7 +181,6 @@ body {
 }
 
 .slide:hover #firstletter {
-  display: inline-block;
   transform: rotate(360deg) scale(1) translate(0px);
 }
 

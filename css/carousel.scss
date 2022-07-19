@@ -42,6 +42,8 @@ table {
 	border-spacing: 0;
 }
 
+
+
 @import url('https://fonts.googleapis.com/css2?family=Edu+QLD+Beginner&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Caveat&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Caveat&family=Finlandica&display=swap');
@@ -56,14 +58,17 @@ body{
 }
 .carousel{
     border-radius: 10px;
-    // overflow: hidden;
     color: aliceblue;
-    // position: absolute;
-    // display: flex;
+    position: relative;
+    display: flex;
     height: 350px;
     align-items: center;
+    justify-content: space-between;
+    width: 100vw;
 }
 .btn{
+    display: flex;
+    align-items: center;
     z-index: 500;
     position: absolute;
     top:50%;
@@ -77,8 +82,7 @@ body{
     width: 40px;
 }
 .lt{
-    // right: 0;
-    border:0;
+    border: 0;
     border-top-right-radius: 5px;
     border-bottom-right-radius: 5px;
 }
@@ -88,33 +92,43 @@ body{
     border-top-left-radius: 5px;
     border-bottom-left-radius: 5px;
 }
+.btnimg{
+    height: 20px;
+}
 .track_container{
-    position: relative;
-    // padding: 20px;
-    background-color: black;
     height: 100%;
+    width: 100%;
+    margin: 2.5vw;
+    overflow: hidden;
 }
-.carousel-track{
-    margin:0;
-    // margin: auto;
-    padding:0;
-    background-color: black;
+.carousel_track{
+    height: 100%;
+    width: 100%;
+    transform: translateX(0);
+    transition: transform 1s ease 0s;
 }
-.slide{transition: opacity 0.5s;}
 .slide{
-    // top:0;
-    // bottom: 0;
-    position: absolute;
+    height: 350px;
     width: 95vw;
     border-radius: 10px;
-    background:$bgcover-grad , url("./resources/86-eighty-six-wallpaper-8.jpg");
+    display: flex;
+    align-items: center;
+    position: absolute;
+}
+.a{
     background-repeat: no-repeat;
     background-position: 10% 5%;
-    transform: translateX(2.5vw);
-    display: flex;
-    /* margin:20px; */
-    height: 350px;
-    align-items: center;
+    background-image:$bgcover-grad, url("./resources/wp9110849-86-eighty-six-wallpapers.jpg");
+}
+.b{
+    background-repeat: no-repeat;
+    background-position: 10% 5%;
+    background-image:$bgcover-grad , url("./resources/86-eighty-six-wallpaper-8.jpg");
+}
+.c{
+    background-repeat: no-repeat;
+    background-position: 10% 5%;
+    background-image:$bgcover-grad , url("./resources/wp9110891-86-eighty-six-wallpapers.jpg");
 }
 .carousel_book_cover{
     z-index: 100;
@@ -129,7 +143,7 @@ body{
 }
 .carousel_card{
     color: rgb(218, 218, 218);
-    display: flex;
+    // display: flex;
     flex-direction: column;
 }
 .carousel_card .c_book_name{
@@ -151,7 +165,7 @@ body{
     transition: transform 0.8s cubic-bezier(0.69, 0.32, 0.32, 1.1);
 }
 .slide:hover #firstletter{
-    display: inline-block;
+    // display: inline-block;
     transform: rotate(360deg) scale(1) translate(0px);
 }
 

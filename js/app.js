@@ -100,6 +100,6 @@ skillRatingsColor = {
 for (let i = 0; i < skillRatingsf.length; i++) {
     // skillName[i].style.color = skillRatingsColor["n"][i];
     // skillName[i].style.textShadow = `0 0 1px ${skillRatingsColor["n"][i]}`;
-    skillRatingsf[i].style.color = skillRatingsColor["f"][i+1];
-    skillRatingsnf[i].style.color = skillRatingsColor["nf"][i+1];
+    skillRatingsf[i].style.color = skillRatingsColor["f"][i];
+    skillRatingsnf[i].style.color = skillRatingsColor["nf"][i];
 }
