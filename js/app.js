@@ -103,3 +103,16 @@ for (let i = 0; i < skillRatingsf.length; i++) {
     skillRatingsf[i].style.color = skillRatingsColor["f"][i];
     skillRatingsnf[i].style.color = skillRatingsColor["nf"][i];
 }
+
+const nav = document.querySelector("nav");
+let scrollC=window.scrollY;
+window.addEventListener("scroll",()=>{
+    if(window.scrollY > scrollC){
+        nav.classList.add("nav-hidden");
+        user_profile.classList.remove("user_profile_active")
+    }
+    else{
+        nav.classList.remove("nav-hidden");
+    }
+    scrollC=window.scrollY;
+})

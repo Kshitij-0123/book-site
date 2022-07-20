@@ -1,8 +1,8 @@
 const track = document.querySelector(".carousel_track");
-const slides = Array.from(track.children);
+const slides = document.querySelectorAll(".slide")
 const rtB = document.querySelector(".rt");
 const ltB = document.querySelector(".lt");
-const slideWidth = slides[0].getBoundingClientRect().width;
+const slideWidth = track.getBoundingClientRect().right+slides[0].getBoundingClientRect().left;
 
 
 slides[0].style.left = `${slideWidth*0}px`;
@@ -29,7 +29,7 @@ ltB.addEventListener("click",()=>{
         track.style.transform = `translateX(-${position}px)`;
         return;
     }
-    position=position-slides[0].getBoundingClientRect().width;
+    position=position-slideWidth;
     track.style.transform = `translateX(-${position}px)`;
     i--;
 });
