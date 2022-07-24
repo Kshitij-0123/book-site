@@ -73,7 +73,6 @@ table {
 
 body {
   background-color: #F0F0F0;
-  padding-top: 50px;
 }
 
 nav {
@@ -372,24 +371,6 @@ nav button {
   display: flex;
   align-items: center;
   position: absolute;
-}
-
-.a {
-  background-repeat: no-repeat;
-  background-position: 10% 5%;
-  background-image: linear-gradient(to right, rgba(4, 4, 4, 0.7), rgba(36, 36, 36, 0.7)), url("../resources/wp9110849-86-eighty-six-wallpapers.jpg");
-}
-
-.b {
-  background-repeat: no-repeat;
-  background-position: 10% 5%;
-  background-image: linear-gradient(to right, rgba(4, 4, 4, 0.7), rgba(36, 36, 36, 0.7)), url("../resources/86-eighty-six-wallpaper-8.jpg");
-}
-
-.c {
-  background-repeat: no-repeat;
-  background-position: 10% 5%;
-  background-image: linear-gradient(to right, rgba(4, 4, 4, 0.7), rgba(36, 36, 36, 0.7)), url("../resources/wp9110891-86-eighty-six-wallpapers.jpg");
 }
 
 .carousel_book_cover {

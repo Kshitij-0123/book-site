@@ -89,7 +89,7 @@ table {
 
 body{
     background-color: #F0F0F0;
-    padding-top: 50px;
+    // padding-top: 50px;
 }
 
 nav{z-index: 1000;}
@@ -364,24 +364,22 @@ nav button{
     align-items: center;
     position: absolute;
 }
-.a{
-    background-repeat: no-repeat;
-    background-position: 10% 5%;
-    background-image:$bgcover-grad, url("../resources/wp9110849-86-eighty-six-wallpapers.jpg");
-}
-.b{
-    background-repeat: no-repeat;
-    background-position: 10% 5%;
-    background-image:$bgcover-grad , url("../resources/86-eighty-six-wallpaper-8.jpg");
-    // backdrop-filter: blur(0px);
-
-}
-.c{
-    background-repeat: no-repeat;
-    background-position: 10% 5%;
-    background-image:$bgcover-grad , url("../resources/wp9110891-86-eighty-six-wallpapers.jpg");
-
-}
+// .a{
+//     background-repeat: no-repeat;
+//     background-position: 10% 5%;
+//     background-image:$bgcover-grad, url("../resources/wp9110849-86-eighty-six-wallpapers.jpg");
+// }
+// .b{
+//     background-repeat: no-repeat;
+//     background-position: 10% 5%;
+//     background-image:$bgcover-grad , url("../resources/86-eighty-six-wallpaper-8.jpg");
+//     // backdrop-filter: blur(0px);
+// }
+// .c{
+//     background-repeat: no-repeat;
+//     background-position: 10% 5%;
+//     background-image:$bgcover-grad , url("../resources/wp9110891-86-eighty-six-wallpapers.jpg");
+// }
 .carousel_book_cover{
     z-index: 100;
     height: 300px;
