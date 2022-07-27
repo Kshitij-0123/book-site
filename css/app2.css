@@ -3,76 +3,13 @@
 @import url("https://fonts.googleapis.com/css2?family=Caveat&family=Finlandica&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Cormorant+SC:wght@500&family=Roboto+Slab&display=swap");
-*::-webkit-scrollbar {
-  width: 6px;
-}
-
-*::-webkit-scrollbar-track {
-  background: #ffffff;
-}
-
-*::-webkit-scrollbar-thumb {
-  background-color: #d6d6d6;
-  border-radius: 2px;
-  border: 1px groove rgba(255, 255, 255, 0);
-}
-
-button {
-  all: unset;
-  cursor: pointer;
-}
-
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed,
-figure, figcaption, footer, header, hgroup,
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  font-size: 100%;
-  font: inherit;
-  vertical-align: baseline;
-}
-
-article, aside, details, figcaption, figure,
-footer, header, hgroup, menu, nav, section {
-  display: block;
+element {
+  --bhc: ;
+  --ahc: ;
 }
 
 body {
-  line-height: 1;
-}
-
-ol, ul {
-  list-style: none;
-}
-
-blockquote, q {
-  quotes: none;
-}
-
-blockquote:before, blockquote:after,
-q:before, q:after {
-  content: "";
-  content: none;
-}
-
-table {
-  border-collapse: collapse;
-  border-spacing: 0;
-}
-
-body {
-  background-color: #F0F0F0;
+  background-color: #f0f0f0;
 }
 
 nav {
@@ -97,7 +34,7 @@ nav {
   align-items: center;
   align-self: flex-end;
   flex-direction: row;
-  background-color: #C7DFFF;
+  background-color: #c7dfff;
   height: 50px;
   justify-content: space-between;
   transition: transform 0.5s, opacity 0.5s;
@@ -172,7 +109,7 @@ nav button {
   font-weight: 100;
   border-radius: 6px;
   padding: 0px;
-  margin: 3px 0 0 5px;
+  margin: 53px 0 0 5px;
   position: fixed;
   z-index: 1000;
   height: 0px;
@@ -187,7 +124,7 @@ nav button {
 }
 
 .user_profile_active {
-  margin: 8px 0 0 5px;
+  margin: 58px 0 0 5px;
   padding: 30px 20px;
   height: 280px;
   width: 200px;
@@ -404,14 +341,30 @@ nav button {
   font-weight: 500;
   font-size: 50px;
   display: inline-block;
-  transform: rotate(0deg) scale(1) translate(-4px);
-  transition: transform 0.8s cubic-bezier(0.69, 0.32, 0.32, 1.1);
 }
 
 .slide:hover #firstletter {
-  transform: rotate(360deg) scale(1) translate(0px);
+  -webkit-animation: pend 2s ease-in-out 0s infinite both;
+          animation: pend 2s ease-in-out 0s infinite both;
 }
 
+@-webkit-keyframes pend {
+  25% {
+    transform: rotate(10deg);
+  }
+  75% {
+    transform: rotate(-10deg);
+  }
+}
+
+@keyframes pend {
+  25% {
+    transform: rotate(10deg);
+  }
+  75% {
+    transform: rotate(-10deg);
+  }
+}
 .carousel_card .c_author {
   font-family: "Roboto Slab", serif;
   color: rgb(218, 218, 218);
@@ -419,16 +372,10 @@ nav button {
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
-  margin: 15px 0 15px 0;
-  transition: margin 0.5s, color 1s;
+  margin: 10px 0 10px 0px;
 }
 
 .slide:hover .c_author {
-  transform: scale(1);
-  margin: 10px 0 10px 80px;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
   color: rgb(255, 255, 255);
 }
 
@@ -443,12 +390,12 @@ nav button {
 .carousel_card .star {
   text-shadow: 0 0 5px rgba(124, 124, 124, 0.61);
   display: inline-block;
-  transform: rotate(170deg) scale(1);
+  transform: rotate(70deg) scale(1);
   transition: all 0.6s;
 }
 
 .carousel_card .star:nth-of-type(2n-1) {
-  transform: rotate(-170deg) scale(1);
+  transform: rotate(-70deg) scale(1);
 }
 
 .slide:hover .carousel_card .star {
@@ -469,144 +416,144 @@ nav button {
   margin: 0;
 }
 
+section {
+  display: flex;
+  margin-bottom: 50px;
+}
+
 .book_shelf {
   display: flex;
   flex-direction: column;
-  margin: 50px 0 50px 0;
+  position: relative;
 }
 
-.row1, .row2 {
+.row1,
+.row2 {
   display: flex;
-  margin: 5px 0 5px 0;
-  justify-content: center;
+  margin-left: 80px;
 }
 
 .book_card {
-  transform: scale(0.95);
-  padding: 10px;
-  padding-right: 0;
-  background-color: white;
   width: 370px;
-  display: flex;
   height: 217px;
-  border: 1px solid black;
+  margin: 20px 10px 20px 10px;
+  padding: 10px;
+  position: relative;
+  display: flex;
+  background-color: white;
+  box-shadow: 0 0 5px rgba(98, 98, 98, 0.472);
+  transition: all 0.5s;
   border-radius: 6px;
+}
+
+.book_card:hover {
+  box-shadow: 0 0 15px rgba(98, 98, 98, 0.472);
 }
 
 .book_cover {
-  height: 233px;
-  width: 147px;
-  transform: scale(0.9);
-  margin-left: -3px;
-  top: -0.5rem;
-  box-shadow: 2px 1px 4px rgba(0, 0, 0, 0.5);
+  height: 200px;
+  width: 133px;
+  margin: auto 28px auto 3px;
+  box-shadow: 0px 0px 3px rgb(105, 105, 105);
   border-radius: 6px;
   position: relative;
-  transition: all 0.5s, margin-left 0.5s;
+  transition: box-shadow 0.4s ease-in-out 0s, transform 0.4s ease-in-out 0.1s, margin 0.4s ease-in-out 0.1s;
+  align-self: center;
 }
 
 .book_card:hover .book_cover {
-  height: 233px;
-  width: 147px;
-  transform: scale(0.9);
-  margin-left: 10px;
-  transform: translateY(-1.7rem);
-  box-shadow: 8px 7px 15px rgba(0, 0, 0, 0.5);
-  border-radius: 6px;
+  margin-left: 9px;
+  margin-right: 28px;
+  transform: scale(1.05);
+  box-shadow: 0px 0px 8px rgb(105, 105, 105);
 }
 
-div .card {
-  margin: 5% 0 0 5px;
+.book_name_div {
+  margin-top: 10px;
+  width: 206px;
+  height: 36px;
   display: flex;
-  flex-direction: column;
-  text-align: center;
-  height: -webkit-fit-content;
-  height: -moz-fit-content;
-  height: fit-content;
-  width: 217px;
-  transition: transform 0.5s ease-out;
+  align-items: center;
 }
 
-.book_card:hover .card {
-  transform: translateX(5px);
-}
-
-.card h1 {
+.book_name {
   font-size: large;
   letter-spacing: 1px;
   font-family: "Roboto Slab", serif;
   font-weight: 700;
 }
 
-.card .author {
-  margin-top: 10px;
+.author {
+  position: absolute;
+  top: 60px;
   font-family: "Bona Nova", serif;
 }
 
 .card .rating {
+  position: absolute;
+  bottom: 130px;
   font-size: x-large;
-  letter-spacing: 0.2em;
   align-self: center;
-}
-
-.rating {
-  margin-top: 5px;
-  font-size: 30px;
 }
 
 .star {
   text-shadow: 0 0 2px rgb(153, 153, 153);
   display: inline-block;
-  transform: rotate(70deg) scale(1);
-  transition: all 0.4s;
+  transition: all 0.4s 0.15s;
 }
 
 .star:nth-of-type(2n-1) {
-  transform: rotate(-70deg) scale(1);
+  transform: rotate(-70deg);
 }
 
-.card:hover .star {
+.star:nth-of-type(2n) {
+  transform: rotate(70deg);
+}
+
+.book_card:hover .star {
   transform: rotate(0deg) scale(1.2);
-  letter-spacing: 0;
 }
 
-.card .synopsis {
-  font-size: 1em;
-  margin-top: 5%;
-  text-align: start;
-  width: 200px;
-  align-self: center;
+.synopsis {
+  position: absolute;
+  bottom: 16px;
+  max-height: 110px;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  width: 210.6px;
+  font-size: 17px;
   overflow-y: scroll;
-  height: 106px;
   font-family: "Oswald", sans-serif;
   line-height: 22px;
-  transition: height 0.3s 0.05s, width 0.3s 0.05s;
-}
-
-.book_card:hover .synopsis {
-  width: 190px;
-  height: 110px;
 }
 
 .quote_list {
   display: flex;
+  height: 558px;
+  flex-direction: column;
   justify-content: space-evenly;
+  align-items: center;
+  border-left: 1px rgba(0, 0, 0, 0.28) dotted;
+  margin-left: 50px;
+  padding-left: 60px;
+  position: relative;
 }
 
 .quote_body {
   position: relative;
-  background-image: linear-gradient(to top, #4568dc, #b06ab3);
   z-index: 1;
   color: white;
-  background-image: linear-gradient(to top, #4568dc, #b06ab3);
+  background-image: var(--bhc);
   border: 0px black solid;
-  height: 148px;
-  width: 242px;
-  margin: 0 0px 20px 0;
+  height: 217px;
+  width: 380px;
+  margin: 20px 0px 20px 0;
   padding: 20px;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
   border-radius: 10px;
   transition: background-image 0.5s linear;
   box-shadow: 1px 0px 5px rgba(0, 0, 0, 0.5);
@@ -619,7 +566,7 @@ div .card {
   right: 0;
   bottom: 0;
   left: 0;
-  background-image: linear-gradient(to right, #b06ab3, #4568dc);
+  background-image: var(--ahc);
   z-index: -1;
   transition: opacity 0.5s linear;
   opacity: 0;
@@ -631,10 +578,12 @@ div .card {
 }
 
 .quote {
+  position: relative;
+  flex-direction: column;
   font-family: "Josefin Sans", sans-serif;
   font-size: medium;
   transition: font-size 0.2s;
-  flex-wrap: wrap;
+  text-align: center;
 }
 
 .quote::first-letter {
@@ -653,10 +602,53 @@ div .card {
   text-transform: uppercase;
   padding: 4px 4px 0 0;
   transition: font-size 0.25s, padding 0.25s;
+  position: absolute;
+  bottom: 15px;
+  right: 15px;
 }
 
 .quote_ref::first-letter {
   font-family: "Roboto Slab", serif;
   font-size: 1.2rem;
   color: #f5f5f4;
+}
+
+.quote_ref_char {
+  color: #f5f5f5;
+  text-align: right;
+  font-family: "Roboto Slab", serif;
+  font-weight: 500;
+  font-size: 0.7em;
+  text-transform: uppercase;
+  padding: 4px 4px 0 0;
+  transition: font-size 0.25s, padding 0.25s;
+  position: absolute;
+  top: 15px;
+  left: 15px;
+}
+
+.quote_ref_char::first-letter {
+  font-family: "Roboto Slab", serif;
+  font-size: 1.2rem;
+  color: #f5f5f4;
+}
+
+.ldmrimg {
+  height: 30px;
+}
+
+.ldmr {
+  position: absolute;
+}
+
+.bosh {
+  right: -35px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.qols {
+  left: 17px;
+  top: 50%;
+  transform: translateY(-50%);
 }/*# sourceMappingURL=app2.css.map */
