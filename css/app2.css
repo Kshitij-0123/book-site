@@ -425,12 +425,25 @@ section {
   display: flex;
   flex-direction: column;
   position: relative;
+  width: 900px;
+  height: 558px;
 }
 
 .row1,
 .row2 {
   display: flex;
   margin-left: 80px;
+}
+
+.flip {
+  z-index: -5;
+  top: 0 !important;
+  position: absolute !important;
+  opacity: 0 !important;
+}
+
+.test {
+  position: relative;
 }
 
 .book_card {
@@ -442,8 +455,9 @@ section {
   display: flex;
   background-color: white;
   box-shadow: 0 0 5px rgba(98, 98, 98, 0.472);
-  transition: all 0.5s;
+  transition: all 0.5s, transform 0.5s;
   border-radius: 6px;
+  opacity: 1;
 }
 
 .book_card:hover {
@@ -526,6 +540,15 @@ section {
   overflow-y: scroll;
   font-family: "Oswald", sans-serif;
   line-height: 22px;
+}
+
+.last {
+  position: absolute;
+  top: 50%;
+  right: 50%;
+  transform: translate(60%, -50%);
+  z-index: -5;
+  opacity: 0;
 }
 
 .quote_list {

@@ -16,13 +16,16 @@ body {
 nav {
   z-index: 1000;
 }
+
 main {
   z-index: 900;
 }
+
 .nav-hidden {
   transform: translateY(-50px);
   opacity: 0;
 }
+
 nav {
   top: 0;
   opacity: 1;
@@ -37,12 +40,14 @@ nav {
   justify-content: space-between;
   transition: transform 0.5s, opacity 0.5s;
 }
+
 #svg {
   height: auto;
   margin: 0 0 0 1%;
   width: 30px;
   margin: 0 1.5%;
 }
+
 #dp {
   background-color: #a5b8d0;
   margin: 10px 0 0 0;
@@ -53,10 +58,12 @@ nav {
   border-radius: 100%;
   z-index: 999;
 }
+
 .ex {
   display: flex;
   align-items: center;
 }
+
 .search {
   width: 0;
   height: 0;
@@ -72,6 +79,7 @@ nav {
   height: 20px;
   transition: width 0.4s cubic-bezier(0.57, -0.29, 0.14, 1.24);
 }
+
 .search_active {
   height: 20px;
   width: 160px;
@@ -80,10 +88,12 @@ nav {
   padding: 7px 5px 5px 12px;
   box-shadow: 0px 0px 20px rgb(172, 182, 210);
 }
+
 .site_icon {
   height: 68px;
   width: 68px;
 }
+
 nav button {
   display: flex;
   justify-content: flex-end;
@@ -94,6 +104,7 @@ nav button {
   display: flex;
   justify-content: center;
 }
+
 .user_profile {
   font-family: "Roboto Slab", serif;
   font-weight: 100;
@@ -115,6 +126,7 @@ nav button {
   flex-direction: column;
   justify-content: space-around;
 }
+
 .user_profile_active {
   margin: 58px 0 0 5px;
   padding: 30px 20px;
@@ -124,12 +136,14 @@ nav button {
   box-shadow: 0px 0px 5px rgb(194, 194, 194);
   border-radius: 6px;
 }
+
 .name_level {
   align-items: center;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
 }
+
 .name_level button {
   font-family: "Oswald", sans-serif;
   font-weight: 900;
@@ -137,16 +151,19 @@ nav button {
   padding: 0.4rem 0.4rem 0.4rem 0.4rem;
   border: 1px solid black;
 }
+
 .status {
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
 }
+
 .statusnum {
   border-radius: 50%;
   width: 10px;
   height: 10px;
 }
+
 .ta {
   margin: 0 22.5px;
   box-shadow: -2px -2px 10px rgb(0, 213, 0);
@@ -154,6 +171,7 @@ nav button {
   padding: 0.5px;
   background: rgb(0, 209, 0) content-box;
 }
+
 .tb {
   margin: 0 22.5px;
   box-shadow: -2px -2px 10px rgb(255, 200, 0);
@@ -161,6 +179,7 @@ nav button {
   padding: 0.5px;
   background: rgb(255, 183, 0) content-box;
 }
+
 .tc {
   margin: 0 22.5px;
   background: rgb(227, 0, 0) content-box;
@@ -168,6 +187,7 @@ nav button {
   padding: 0.5px;
   box-shadow: -2px -2px 10px rgb(255, 29, 29);
 }
+
 .td {
   margin: 0 22.5px;
   background: rgb(60, 60, 60) content-box;
@@ -175,6 +195,7 @@ nav button {
   padding: 0.5px;
   box-shadow: -2px -2px 10px rgb(71, 71, 71);
 }
+
 .act {
   margin: 0;
   position: relative;
@@ -182,6 +203,7 @@ nav button {
   right: -27px;
   z-index: 1000;
 }
+
 .stat {
   position: absolute;
   margin-top: 35px;
@@ -191,6 +213,7 @@ nav button {
   font-weight: 600;
   transition: height 0.5s cubic-bezier(0.59, -0.07, 0.09, 0.94);
 }
+
 .stat_active {
   height: 15px;
   text-align: center;
@@ -207,10 +230,12 @@ nav button {
   justify-content: center;
   align-items: center;
 }
+
 .status_stat:first-of-type {
   border-top-left-radius: 6px;
   border-bottom-left-radius: 6px;
 }
+
 .status_stat:last-of-type {
   border-right: 1px solid rgba(230, 230, 230);
   border-top-right-radius: 6px;
@@ -229,6 +254,7 @@ nav button {
   width: 99.5vw;
   transform: scale(0.9);
 }
+
 .btn {
   display: flex;
   align-items: center;
@@ -242,23 +268,28 @@ nav button {
   transition: width 0.5s cubic-bezier(0.36, 0.55, 0.02, 1.15);
   background-color: rgba(104, 104, 104, 0.244);
 }
+
 .btn:hover {
   width: 40px;
 }
+
 .lt {
   border: 0;
   border-top-right-radius: 5px;
   border-bottom-right-radius: 5px;
 }
+
 .rt {
   right: 0;
   border: 0;
   border-top-left-radius: 5px;
   border-bottom-left-radius: 5px;
 }
+
 .btnimg {
   height: 20px;
 }
+
 .track_container {
   border-radius: 10px;
   height: 100%;
@@ -266,12 +297,14 @@ nav button {
   margin: 2.5vw;
   overflow: hidden;
 }
+
 .carousel_track {
   height: 100%;
   width: 100%;
   transform: translateX(0);
   transition: transform 0.5s ease 0s;
 }
+
 .slide {
   height: 350px;
   width: 95vw;
@@ -280,6 +313,7 @@ nav button {
   align-items: center;
   position: absolute;
 }
+
 .carousel_book_cover {
   z-index: 100;
   height: 300px;
@@ -288,13 +322,16 @@ nav button {
   box-shadow: 0px 0px 5px rgb(161, 161, 161);
   transition: all 0.5s;
 }
+
 .slide:hover .carousel_book_cover {
   transform: scale(1.05);
 }
+
 .carousel_card {
   color: rgb(218, 218, 218);
   flex-direction: column;
 }
+
 .carousel_card .c_book_name {
   font-family: "Roboto Slab", serif;
   font-weight: 400;
@@ -302,19 +339,23 @@ nav button {
   font-size: 35px;
   margin: 5px 0 5px 0;
 }
+
 #firstletter {
   font-family: "Roboto Slab", serif;
   font-weight: 500;
   font-size: 50px;
   display: inline-block;
 }
+
 .slide:hover #firstletter {
   animation: pend 2s ease-in-out 0s infinite both;
 }
+
 @keyframes pend {
   25% {
     transform: rotate(10deg);
   }
+
   75% {
     transform: rotate(-10deg);
   }
@@ -327,6 +368,7 @@ nav button {
   width: fit-content;
   margin: 10px 0 10px 0px;
 }
+
 .slide:hover .c_author {
   color: rgb(255, 255, 255);
 }
@@ -336,19 +378,23 @@ nav button {
   width: fit-content;
   margin: 0 0 10px 0;
 }
+
 .carousel_card .star {
   text-shadow: 0 0 5px rgba(124, 124, 124, 0.61);
   display: inline-block;
   transform: rotate(70deg) scale(1);
   transition: all 0.6s;
 }
+
 .carousel_card .star:nth-of-type(2n-1) {
   transform: rotate(-70deg) scale(1);
 }
+
 .slide:hover .carousel_card .star {
   transform: rotate(0deg) scale(1.2);
   letter-spacing: 0;
 }
+
 .carousel_synopsis {
   color: aliceblue;
   background: linear-gradient(to right, rgb(255, 255, 255), rgb(171, 171, 171));
@@ -360,20 +406,37 @@ nav button {
   width: 98%;
   margin: 0;
 }
+
 section {
   display: flex;
   margin-bottom: 50px;
 }
+
 .book_shelf {
   display: flex;
   flex-direction: column;
   position: relative;
+  width: 900px;
+  height: 558px;
 }
+
 .row1,
 .row2 {
   display: flex;
   margin-left: 80px;
 }
+
+.flip {
+  z-index: -5;
+  top: 0 !important;
+  position: absolute !important;
+  opacity: 0 !important;
+}
+
+.test {
+  position: relative;
+}
+
 .book_card {
   width: 370px;
   height: 217px;
@@ -383,13 +446,15 @@ section {
   display: flex;
   background-color: white;
   box-shadow: 0 0 5px rgba(98, 98, 98, 0.472);
-  transition: all 0.5s;
+  transition: all 0.5s, transform 0.5s;
   border-radius: 6px;
+  opacity: 1;
 }
-.book_card:hover{
+
+.book_card:hover {
   box-shadow: 0 0 15px rgba(98, 98, 98, 0.472);
-  
 }
+
 .book_cover {
   height: 200px;
   width: 133px;
@@ -401,12 +466,14 @@ section {
     margin 0.4s ease-in-out 0.1s;
   align-self: center;
 }
+
 .book_card:hover .book_cover {
   margin-left: 9px;
   margin-right: 28px;
   transform: scale(1.05);
   box-shadow: 0px 0px 8px rgb(105, 105, 105);
 }
+
 .book_name_div {
   margin-top: 10px;
   width: 206px;
@@ -414,38 +481,45 @@ section {
   display: flex;
   align-items: center;
 }
+
 .book_name {
   font-size: large;
   letter-spacing: 1px;
   font-family: "Roboto Slab", serif;
   font-weight: 700;
-  // padding-top: 15px;
 }
+
 .author {
   position: absolute;
   top: 60px;
   font-family: "Bona Nova", serif;
 }
+
 .card .rating {
   position: absolute;
   bottom: 130px;
   font-size: x-large;
   align-self: center;
 }
+
 .star {
   text-shadow: 0 0 2px rgb(153, 153, 153);
   display: inline-block;
   transition: all 0.4s 0.15s;
 }
+
 .star:nth-of-type(2n-1) {
   transform: rotate(-70deg);
 }
+
 .star:nth-of-type(2n) {
   transform: rotate(70deg);
 }
+
 .book_card:hover .star {
   transform: rotate(0deg) scale(1.2);
 }
+
 .synopsis {
   position: absolute;
   bottom: 16px;
@@ -456,6 +530,14 @@ section {
   overflow-y: scroll;
   font-family: "Oswald", sans-serif;
   line-height: 22px;
+}
+.last{
+  position: absolute;
+  top:50%;
+  right:50%;
+  transform: translate(60%,-50%);
+  z-index: -5;
+  opacity: 0;
 }
 
 .quote_list {
@@ -470,6 +552,7 @@ section {
   padding-left: 60px;
   position: relative;
 }
+
 .quote_body {
   position: relative;
   z-index: 1;
@@ -491,6 +574,7 @@ section {
   transition: background-image 0.5s linear;
   box-shadow: 1px 0px 5px rgba(0, 0, 0, 0.5);
 }
+
 .quote_body::before {
   position: absolute;
   content: "";
@@ -504,9 +588,11 @@ section {
   opacity: 0;
   border-radius: 8px;
 }
+
 .quote_body:hover::before {
   opacity: 1;
 }
+
 .quote {
   position: relative;
   flex-direction: column;
@@ -515,6 +601,7 @@ section {
   transition: font-size 0.2s;
   text-align: center;
 }
+
 .quote::first-letter {
   font-family: "Josefin Sans", sans-serif;
   font-size: 1.5rem;
@@ -536,6 +623,7 @@ section {
   bottom: 15px;
   right: 15px;
 }
+
 .quote_ref::first-letter {
   font-family: "Roboto Slab", serif;
   font-size: 1.2rem;
@@ -556,24 +644,28 @@ section {
   top: 15px;
   left: 15px;
 }
+
 .quote_ref_char::first-letter {
   font-family: "Roboto Slab", serif;
   font-size: 1.2rem;
   color: #f5f5f4;
 }
 
-.ldmrimg{
+.ldmrimg {
   height: 30px;
 }
-.ldmr{
+
+.ldmr {
   position: absolute;
 }
-.bosh{
+
+.bosh {
   right: -35px;
   top: 50%;
   transform: translateY(-50%);
 }
-.qols{
+
+.qols {
   left: 17px;
   top: 50%;
   transform: translateY(-50%);
