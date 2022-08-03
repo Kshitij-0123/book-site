@@ -1,27 +1,27 @@
-let quote;
+let quote = {};
 fetch('https://animechan.vercel.app/api/quotes')
     .then(response => response.json())
     .then(quotes => {
-        let quote = {};
-        quotechecker(quotes, quote);
-        console.log(quote)
+        // quotechecker(quotes, quote);
+        quote = quotes;
+        // console.log(quote)
         quoteLoader(quote);
     })
 
-const quotechecker = (q, quote) => {
-    let c = 0;
-    for (let i = 0; i < q.length; i++) {
-        if (c == 4) {
-            break;
-        }
-        else {
-            if (q[i].quote.length < 102 && q[i].anime.length < 25 && q[i].character.length < 25) {
-                quote[c] = q[i];
-                c++;
-            }
-        }
-    }
-}
+// const quotechecker = (q, quote) => {
+//     let c = 0;
+//     for (let i = 0; i < q.length; i++) {
+//         if (c == 40) {
+//             break;
+//         }
+//         else {
+//             if (q[i].quote.length < 150 && q[i].anime.length < 40 && q[i].character.length < 40) {
+//                 quote[c] = q[i];
+//                 c++;
+//             }
+//         }
+//     }
+// }
 
 const a = document.querySelectorAll(".quote_body");
 const color = {
@@ -44,6 +44,7 @@ for (let i = 0; i < a.length; i++) {
     a[i].style.setProperty("--ahc", color["ahc"][i]);
 }
 
+let cnt = 0;
 const quoteLoader = (q) => {
     const isQuoteDiv = [
         document.querySelectorAll(".quote"),
@@ -51,8 +52,25 @@ const quoteLoader = (q) => {
         document.querySelectorAll(".quote_ref_char")
     ];
     for (let i = 0; i < 2; i++) {
-        isQuoteDiv[0][i].innerHTML = `"${q[i].quote}"`
-        isQuoteDiv[1][i].innerHTML = `${q[i].anime}`
-        isQuoteDiv[2][i].innerHTML = `${q[i].character}`
+        if (cnt < 10) {
+            isQuoteDiv[0][i].innerHTML = `"${q[cnt].quote}"`
+            isQuoteDiv[1][i].innerHTML = `${q[cnt].anime}`
+            isQuoteDiv[2][i].innerHTML = `${q[cnt].character}`
+            cnt++;
+        }
+        else {
+            cnt = 0;
+            fetch('https://animechan.vercel.app/api/quotes')
+                .then(response => response.json())
+                .then(quotes => {
+                    quote = quotes;
+                    quoteLoader(quote)
+                })
+        }
     }
 }
+const btn = document.querySelector(".qols");
+btn.addEventListener('click', () => {
+    console.log('c');
+    quoteLoader(quote);
+})
