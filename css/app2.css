@@ -440,9 +440,14 @@ section {
   top: 0 !important;
   position: absolute !important;
   opacity: 0 !important;
+  transition: background-image 0.5s linear, opacity 0.5s ease-in-out;
 }
 
 .test {
+  position: relative;
+}
+
+.testq {
   position: relative;
 }
 
@@ -561,6 +566,7 @@ section {
   margin-left: 50px;
   padding-left: 60px;
   position: relative;
+  transition: background-image 0.5s linear, opacity 0.5s ease-in-out;
 }
 
 .quote_body {
@@ -578,7 +584,7 @@ section {
   justify-content: center;
   align-items: center;
   border-radius: 10px;
-  transition: background-image 0.5s linear;
+  transition: background-image 0.5s linear, opacity 0.5s ease-in-out;
   box-shadow: 1px 0px 5px rgba(0, 0, 0, 0.5);
 }
 

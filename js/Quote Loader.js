@@ -5,7 +5,8 @@ fetch('https://animechan.vercel.app/api/quotes')
         // quotechecker(quotes, quote);
         quote = quotes;
         // console.log(quote)
-        quoteLoader(quote);
+        quoteLoaderf(quote);
+        quoteLoaderb(quote);
     })
 
 // const quotechecker = (q, quote) => {
@@ -45,12 +46,53 @@ for (let i = 0; i < a.length; i++) {
 }
 
 let cnt = 0;
+const isQuoteDiv = [
+    document.querySelectorAll(".quote"),
+    document.querySelectorAll(".quote_ref"),
+    document.querySelectorAll(".quote_ref_char")
+];
+const quoteLoaderf = (q) => {
+    for (let i = 0; i < 3; i++) {
+        if (cnt < 10) {
+            isQuoteDiv[0][i].innerHTML = `"${q[cnt].quote}"`
+            isQuoteDiv[1][i].innerHTML = `${q[cnt].anime}`
+            isQuoteDiv[2][i].innerHTML = `${q[cnt].character}`
+            cnt++;
+            i++;
+        }
+        // else {
+        //     cnt = 0;
+        //     fetch('https://animechan.vercel.app/api/quotes')
+        //         .then(response => response.json())
+        //         .then(quotes => {
+        //             quote = quotes;
+        //             quoteLoader(quote)
+        //         })
+        // }
+    }
+}
+const quoteLoaderb = (q) => {
+    for (let i = 1; i < 4; i++) {
+        if (cnt < 10) {
+            isQuoteDiv[0][i].innerHTML = `"${q[cnt].quote}"`
+            isQuoteDiv[1][i].innerHTML = `${q[cnt].anime}`
+            isQuoteDiv[2][i].innerHTML = `${q[cnt].character}`
+            cnt++;
+            i++;
+        }
+        // else {
+        //     cnt = 0;
+        //     fetch('https://animechan.vercel.app/api/quotes')
+        //         .then(response => response.json())
+        //         .then(quotes => {
+        //             quote = quotes;
+        //             quoteLoader(quote)
+        //         })
+        // }
+    }
+}
 const quoteLoader = (q) => {
-    const isQuoteDiv = [
-        document.querySelectorAll(".quote"),
-        document.querySelectorAll(".quote_ref"),
-        document.querySelectorAll(".quote_ref_char")
-    ];
+
     for (let i = 0; i < 2; i++) {
         if (cnt < 10) {
             isQuoteDiv[0][i].innerHTML = `"${q[cnt].quote}"`
@@ -58,19 +100,28 @@ const quoteLoader = (q) => {
             isQuoteDiv[2][i].innerHTML = `${q[cnt].character}`
             cnt++;
         }
-        else {
-            cnt = 0;
-            fetch('https://animechan.vercel.app/api/quotes')
-                .then(response => response.json())
-                .then(quotes => {
-                    quote = quotes;
-                    quoteLoader(quote)
-                })
-        }
+        // else {
+        //     cnt = 0;
+        //     fetch('https://animechan.vercel.app/api/quotes')
+        //         .then(response => response.json())
+        //         .then(quotes => {
+        //             quote = quotes;
+        //             quoteLoader(quote)
+        //         })
+        // }
     }
 }
+const qbody = document.querySelectorAll('.quote_body')
 const btn = document.querySelector(".qols");
+let x=0
 btn.addEventListener('click', () => {
-    console.log('c');
-    quoteLoader(quote);
+    for (let i = 0; i < 4; i++) {
+        qbody[i].classList.toggle('flip')
+    }
+    if(x%2==0){
+        quoteLoaderb(quote);
+    }
+    else{
+        quoteLoaderf(quote);
+    }
 })
