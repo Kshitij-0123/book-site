@@ -139,3 +139,15 @@ window.addEventListener("scroll", () => {
   scrollC = window.scrollY;
   chkiftop();
 });
+
+const themebutton = document.querySelectorAll("nav > img");
+themebutton[1].addEventListener('click',()=>{
+  for(let i=0;i<2;i++){
+    themebutton[i].classList.toggle('disabled-theme')
+  }
+})
+themebutton[0].addEventListener('click',()=>{
+  for(let i=0;i<2;i++){
+    themebutton[i].classList.toggle('disabled-theme')
+  }
+})
