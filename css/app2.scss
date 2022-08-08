@@ -3,7 +3,19 @@
 @import url("https://fonts.googleapis.com/css2?family=Caveat&family=Finlandica&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Cormorant+SC:wght@500&family=Roboto+Slab&display=swap");
+*::-webkit-scrollbar {
+  width: 6px;
+}
 
+*::-webkit-scrollbar-track {
+  background: #ffffff;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: #d6d6d6;
+  border-radius: 2px;
+  border: 1px groove #ffffff00;
+}
 element {
   --bhc: ;
   --ahc: ;
@@ -126,9 +138,11 @@ nav button {
   flex-direction: column;
   justify-content: space-around;
 }
-
+.auser{
+  margin: 58px 0 0 0px;
+}
 .user_profile_active {
-  margin: 58px 0 0 5px;
+  // margin: 58px 0 0 5px;
   padding: 30px 20px;
   height: 280px;
   width: 200px;

@@ -1,16 +1,4 @@
-*::-webkit-scrollbar {
-    width: 6px;
-}
 
-*::-webkit-scrollbar-track {
-    background: #ffffff;
-}
-
-*::-webkit-scrollbar-thumb {
-    background-color: #d6d6d6;
-    border-radius: 2px;
-    border: 1px groove #ffffff00;
-}
 
 button {
     all: unset;

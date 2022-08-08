@@ -35,7 +35,7 @@
             </div>
         </nav>
         <div class="profile_card">
-            <div class="user_profile">
+            <div class="user_profile auser">
                 <div class="name_level">
                     <h1 class="name">Mileina Celesteria</h1>
                     <button>99</button>
@@ -258,6 +258,20 @@
             </div>
         </section>
     </main>
+
+    <script>
+        const chkiftop = () => {
+            if (scrollC === 0) {
+                document.querySelector("nav").style.position = "relative";
+                document.querySelector(".auser").style.margin = "7px 0 0 0";
+                document.querySelector(".carousel").style.margin = "0px 0 50px";
+            } else {
+                document.querySelector("nav").style.position = "";
+                document.querySelector(".auser").style.margin = "";
+                document.querySelector(".carousel").style.margin = "";
+            }
+        };
+    </script>
     <script src="./js/Carousel Loader.js"></script>
     <script src="./js/Book Shelf Loader.js"></script>
     <script src="./js/Quote Loader.js"></script>
