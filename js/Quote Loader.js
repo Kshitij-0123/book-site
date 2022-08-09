@@ -33,8 +33,8 @@ const color = {
         "linear-gradient(to bottom, #37314f, #928dab)"
     ],
     "ahc": [
-        "linear-gradient(to right, #eea849, #f46b45",
-        "linear-gradient(to right, #b06ab3, #4568dc)",
+        "linear-gradient(to left, #eea849, #f46b45",
+        "linear-gradient(to left, #b06ab3, #4568dc)",
         "linear-gradient(360deg, #54c77a, #52c234)",
         "linear-gradient(320deg, #928dab, #37314f)"
     ]
