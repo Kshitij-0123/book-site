@@ -59,7 +59,8 @@ const carouselLoader = (x) => {
     ]
     if (x != undefined) {
         for (let i = 0; i < 3; i++) {
-            carouselElements[0][i].style.backgroundImage = "linear-gradient(to right,rgba(4, 4, 4, 0.7), rgba(36, 36, 36, 0.7)) , url(" + x.data[i].images.jpg.large_image_url + ")";
+            // carouselElements[0][i].style.backgroundImage = "linear-gradient(to right,rgba(4, 4, 4, 0.7), rgba(36, 36, 36, 0.7))";
+            // , url(" + x.data[i].images.jpg.large_image_url + ")
             carouselElements[1][i].src = x.data[i].images.jpg.large_image_url;
             carouselElements[2][i].innerHTML = ` <span id="firstletter">${x.data[i].title[0]}</span>${x.data[i].title.substring(1)}`
             carouselElements[3][i].innerHTML = eraseSpecialChars(x.data[i].authors[0].name)

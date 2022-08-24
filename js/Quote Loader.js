@@ -24,27 +24,6 @@ fetch('https://animechan.vercel.app/api/quotes')
 //     }
 // }
 
-const a = document.querySelectorAll(".quote_body");
-const color = {
-    "bhc": [
-        "linear-gradient(to top, #f46b45, #eea849)",
-        "linear-gradient(to top, #4568dc, #b06ab3)",
-        "linear-gradient(90deg, #52c234, #54c77a)",
-        "linear-gradient(to bottom, #37314f, #928dab)"
-    ],
-    "ahc": [
-        "linear-gradient(to left, #eea849, #f46b45",
-        "linear-gradient(to left, #b06ab3, #4568dc)",
-        "linear-gradient(360deg, #54c77a, #52c234)",
-        "linear-gradient(320deg, #928dab, #37314f)"
-    ]
-}
-
-for (let i = 0; i < a.length; i++) {
-    a[i].style.setProperty("--bhc", color["bhc"][i]);
-    a[i].style.setProperty("--ahc", color["ahc"][i]);
-}
-
 let cnt = 0;
 const isQuoteDiv = [
     document.querySelectorAll(".quote"),
